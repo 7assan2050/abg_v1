@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Cairo', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+    --color-gold-50: #fefce8;
+    --color-gold-100: #fef9c3;
+    --color-gold-200: #fef08a;
+    --color-gold-300: #fde047;
+    --color-gold-400: #facc15;
+    --color-gold-500: #C9A84C;
+    --color-gold-600: #B8960A;
+    --color-gold-700: #A07C00;
+    --color-gold-800: #8B6914;
+    --color-gold-900: #744F00;
+    --color-navy-900: #0D1B2A;
+    --color-navy-800: #1A2D42;
+    --color-navy-700: #243B55;
+    --color-navy-600: #2E4D6B;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Cairo', 'Tajawal', sans-serif;
+    }
+}
+
+@layer components {
+    .section-title {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #0D1B2A;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        color: #B8960A;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-service {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #f3f4f6;
+    }
+
+    .card-service:hover {
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        transform: translateY(-4px);
+    }
+
+    .card-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+        color: #B8960A;
+        background: #fefce8;
+        transition: all 0.3s ease;
+    }
+
+    .card-service:hover .card-icon {
+        background: #C9A84C;
+        color: white;
+    }
+}
+
